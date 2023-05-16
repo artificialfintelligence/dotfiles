@@ -80,7 +80,7 @@
   "window.restoreWindows": "none",
   "window.newWindowDimensions": "maximized",
   "workbench.editor.enablePreview": true,
-  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "Ayu Light Bordered",
   "color-highlight.markerType": "dot-before",
   "workbench.iconTheme": "vscode-great-icons",
   "workbench.settings.editor": "json",
@@ -89,4 +89,9 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.panel.defaultLocation": "bottom",
   "editor.inlineSuggest.enabled": true,
+
+  "jupyter.runStartupCommands": [
+    "%load_ext autoreload",
+    "%autoreload 2"
+  ],
 }
