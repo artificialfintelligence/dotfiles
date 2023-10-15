@@ -2,7 +2,10 @@
   "[python]": {
       "editor.defaultFormatter": "ms-python.black-formatter",
       "editor.formatOnSave": true,
-      "editor.tabSize": 4
+      "editor.tabSize": 4,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    }
   },
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.external.osxExec": "Iterm.app",
@@ -14,10 +17,10 @@
   "editor.renderControlCharacters": true,
   "editor.fontFamily": "FiraCode-Retina",
   "editor.fontLigatures": true,
-  "python.formatting.provider": "none",
   "black-formatter.args": [
-    "-l 100"
+    "-l 80"
   ],
+  "isort.check": true,
   "editor.rulers": [
       80,
       100,
@@ -73,14 +76,11 @@
   "python.linting.flake8Enabled": false,
   "python.linting.pylintEnabled": false,
   "python.terminal.activateEnvironment": false,
-  "ruby.lint": {
-      "rubocop": true
-  },
   "telemetry.telemetryLevel": "off",
   "window.restoreWindows": "none",
   "window.newWindowDimensions": "maximized",
   "workbench.editor.enablePreview": true,
-  "workbench.colorTheme": "Ayu Light Bordered",
+  "workbench.colorTheme": "Atom One Light",
   "color-highlight.markerType": "dot-before",
   "workbench.iconTheme": "vscode-great-icons",
   "workbench.settings.editor": "json",
@@ -94,4 +94,11 @@
     "%load_ext autoreload",
     "%autoreload 2"
   ],
+  "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
 }

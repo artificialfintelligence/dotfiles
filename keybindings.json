@@ -11,7 +11,7 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+cmd+/",
+    "key": "ctrl+alt+cmd+/",
     "command": "github.copilot.toggleCopilot"
   }
 ]
