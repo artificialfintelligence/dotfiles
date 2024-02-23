@@ -5,7 +5,7 @@ Host *
   IdentityFile ~/.ssh/id_ed25519
 
 ## override as per host
-Host de-zoomcamp-vm
-  HostName 35.185.233.17
+Host dezc-vm2
+  HostName 34.105.117.229
   User freddie
   IdentityFile ~/.ssh/gcp2
