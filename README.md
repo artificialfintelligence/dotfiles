@@ -1,4 +1,4 @@
-This repository is used by [Le Wagon](https://www.lewagon.com) students.
+Forked from [Le Wagon](https://www.lewagon.com) Data Science bootcamp (batch 1009).
 
 ## Toolset
 
