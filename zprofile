@@ -1,6 +1,7 @@
 # Setup the PATH for pyenv binaries and shims
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH" # for poetry
 type -a pyenv > /dev/null && eval "$(pyenv init --path)"
 
 arch_name="$(uname -m)"
@@ -18,6 +19,10 @@ elif [ "${arch_name}" = "arm64" ]; then
 else
     echo "Unknown architecture: ${arch_name}"
 fi
+
+# if command -v ngrok &>/dev/null; then
+#   eval "$(ngrok completion)"
+# fi
 
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"

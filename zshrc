@@ -99,8 +99,9 @@ plugins=(
   zsh-autosuggestions
   direnv
   # zsh-syntax-highlighting
-  # zsh-interactive-cd
+  zsh-interactive-cd
   history-substring-search
+  poetry
 )
 
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
@@ -145,6 +146,7 @@ alias lr="ls -hartl"
 alias jula="jupyter lab"
 alias juno="jupyter notebook"
 alias -g G=' | grep -i '
+alias fman="compgen -c | fzf | xargs man"
 
 # Avoid accidental deletion.
 alias rm="echo Use 'trash', or the full path '/bin/rm -i'" # alias rm='rm -i'
@@ -169,5 +171,31 @@ fi
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv version-name)]'
 
+if command -v pyenv &>/dev/null; then
+    eval "$(pyenv init -)"
+fi
+if command -v pyenv-virtualenv &>/dev/null; then
+    eval "$(pyenv virtualenv-init -)"
+fi
+
 # Set ipdb as the default Python debugger
-export PYTHONBREAKPOINT=ipdb.set_traceexport GOOGLE_APPLICATION_CREDENTIALS=/Users/fafa/code/artificialfintelligence/gcp/le-wagon-pt-ds-bootcamp-a238c92ea11f.json
+export PYTHONBREAKPOINT=ipdb.set_trace
+
+export GOOGLE_APPLICATION_CREDENTIALS=/Users/fafa/Projects/GCP/dezc-svc-acct-brilliant-vent-400717-412c3f33b8db.json
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
