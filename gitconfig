@@ -37,7 +37,7 @@
   lg = log --graph --all --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)%an%Creset %C(yellow)%d%Creset'
 
   # Serve local repo. http://coderwall.com/p/eybtga
-  # Then other can access via `git clone git://#{YOUR_IP_ADDRESS}/
+  # Then others can access via `git clone git://#{YOUR_IP_ADDRESS}/
   serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 
   # Checkout to defaultBranch
@@ -52,17 +52,19 @@
 [push]
 	default = simple
 
-[branch "master"]
+[branch "main"]
   mergeoptions = --no-edit
 
 [pull]
   rebase = false
 
 [init]
-  defaultBranch = master
+  defaultBranch = main
+
 [user]
 	email = farid.t@gmail.com
-	name = Farid Tabatabaie
+	name = Farid Taba
+
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
