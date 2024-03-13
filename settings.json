@@ -4,8 +4,8 @@
       "editor.formatOnSave": true,
       "editor.tabSize": 4,
       "editor.codeActionsOnSave": {
-        "source.organizeImports": true
-    }
+        "source.organizeImports": "explicit"
+      }
   },
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.external.osxExec": "Iterm.app",
@@ -76,8 +76,6 @@
   "telemetry.telemetryLevel": "off",
   "window.restoreWindows": "none",
   "window.newWindowDimensions": "maximized",
-  "workbench.editor.enablePreview": true,
-  "workbench.colorTheme": "Atom One Light",
   "color-highlight.markerType": "dot-before",
   "workbench.iconTheme": "vscode-great-icons",
   "workbench.settings.editor": "json",
@@ -93,9 +91,11 @@
   ],
   "git.autofetch": true,
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": false,
     "markdown": false,
     "scminput": false
   },
+  "workbench.colorTheme": "Atom One Light",
+  "cmake.options.statusBarVisibility": "icon",
 }
