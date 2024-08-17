@@ -96,6 +96,6 @@
     "markdown": false,
     "scminput": false
   },
-  "workbench.colorTheme": "Atom One Light",
+  "workbench.colorTheme": "Atom One Dark",
   "cmake.options.statusBarVisibility": "icon",
 }
