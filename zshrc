@@ -199,3 +199,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# For Windows Terminal (WSL)
+bindkey -e
+# Control + backspace
+bindkey '^H' backward-kill-word
+# Control + arrows
+bindkey ";5C" forward-word
+bindkey ";5D" backward-word
