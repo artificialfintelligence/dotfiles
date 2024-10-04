@@ -2,10 +2,4 @@
 Host *
   UseKeychain yes
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/id_ed25519
-
-## override as per host
-Host dezc-vm2
-  HostName 34.105.117.229
-  User freddie
-  IdentityFile ~/.ssh/gcp2
+  IdentityFile ~/.ssh/id_rsa
