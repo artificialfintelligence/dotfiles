@@ -62,7 +62,7 @@
   defaultBranch = main
 
 [user]
-	email = farid.t@gmail.com
+	email = farid@panalyt.com
 	name = Farid Taba
 
 [filter "lfs"]

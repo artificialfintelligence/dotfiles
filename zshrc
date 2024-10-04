@@ -96,9 +96,9 @@ plugins=(
   web-search
   extract
   history
-  zsh-autosuggestions
+  # zsh-autosuggestions
   direnv
-  # zsh-syntax-highlighting
+  zsh-syntax-highlighting
   zsh-interactive-cd
   history-substring-search
   poetry
@@ -156,7 +156,7 @@ alias cp='cp -i'
 # Prevent rm -f from asking for confirmation on things like `rm -f *.bak`.
 setopt rm_star_silent
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Include Z
 if command -v brew >/dev/null 2>&1; then
@@ -181,28 +181,28 @@ fi
 # Set ipdb as the default Python debugger
 export PYTHONBREAKPOINT=ipdb.set_trace
 
-export GOOGLE_APPLICATION_CREDENTIALS=/Users/fafa/Projects/GCP/dezc-svc-acct-brilliant-vent-400717-412c3f33b8db.json
+# export GOOGLE_APPLICATION_CREDENTIALS=/Users/fafa/Projects/GCP/dezc-svc-acct-brilliant-vent-400717-412c3f33b8db.json
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# # >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+#         . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
 
-# For Windows Terminal (WSL)
-bindkey -e
-# Control + backspace
-bindkey '^H' backward-kill-word
-# Control + arrows
-bindkey ";5C" forward-word
-bindkey ";5D" backward-word
+# # For Windows Terminal (WSL)
+# bindkey -e
+# # Control + backspace
+# bindkey '^H' backward-kill-word
+# # Control + arrows
+# bindkey ";5C" forward-word
+# bindkey ";5D" backward-word
