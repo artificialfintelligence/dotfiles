@@ -1,101 +1,127 @@
 {
-  "[python]": {
-      "editor.defaultFormatter": "ms-python.black-formatter",
-      "editor.formatOnSave": true,
-      "editor.tabSize": 4,
-      "editor.codeActionsOnSave": {
-        "source.organizeImports": "explicit"
-      }
-  },
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "terminal.external.osxExec": "Iterm.app",
-  "editor.bracketPairColorization.enabled": true,
-  "editor.detectIndentation": false,
-  "editor.guides.bracketPairs": "active",
-  "editor.minimap.enabled": true,
-  "editor.multiCursorModifier": "ctrlCmd",
-  "editor.renderControlCharacters": true,
-  "editor.fontFamily": "FiraCode-Retina",
-  "editor.fontLigatures": true,
-  "black-formatter.args": [
-    "-l 80"
-  ],
-  "isort.check": true,
-  "editor.rulers": [
-      80,
-      100,
-      120
-  ],
-  "editor.showFoldingControls": "always",
-  "editor.snippetSuggestions": "top",
-  "editor.tabSize": 2,
-  "emmet.includeLanguages": {
-      "erb": "html"
-  },
-  "emmet.showSuggestionsAsSnippets": true,
-  "emmet.triggerExpansionOnTab": true,
-  "explorer.confirmDelete": false,
-  "files.exclude": {
-      "__pycache__": true,
-      "_site": true,
-      ".asset-cache": true,
-      ".bundle": true,
-      ".ipynb_checkpoints": true,
-      ".pytest_cache": true,
-      ".sass-cache": true,
-      ".svn": true,
-      "**/.DS_Store": true,
-      "**/.egg-info": true,
-      "**/.git": true,
-      "build": true,
-      "coverage": true,
-      "dist": true,
-      "log": true,
-      "node_modules": true,
-      "public/packs": true,
-      "tmp": true
-  },
-  "files.hotExit": "off",
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "files.watcherExclude": {
-      "**/audits/**": true,
-      "**/coverage/**": true,
-      "**/log/**": true,
-      "**/node_modules/**": true,
-      "**/tmp/**": true,
-      "**/vendor/**": true
-  },
-  "notebook.diff.ignoreMetadata": true,
-  "notebook.lineNumbers": "on",
-  "notebook.markup.fontSize": 13,
-  "python.defaultInterpreterPath": "~/.pyenv/shims/python",
-  "python.languageServer": "Pylance",
-  "python.terminal.activateEnvironment": false,
-  "telemetry.telemetryLevel": "off",
-  "window.restoreWindows": "none",
-  "window.newWindowDimensions": "maximized",
-  "color-highlight.markerType": "dot-before",
-  "workbench.iconTheme": "vscode-great-icons",
-  "workbench.settings.editor": "json",
-  "workbench.settings.openDefaultSettings": true,
-  "workbench.settings.useSplitJSON": true,
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.panel.defaultLocation": "bottom",
-  "editor.inlineSuggest.enabled": true,
-
-  "jupyter.runStartupCommands": [
-    "%load_ext autoreload",
-    "%autoreload 2"
-  ],
-  "git.autofetch": true,
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
-  "workbench.colorTheme": "Atom One Dark",
-  "cmake.options.statusBarVisibility": "icon",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "diffEditor.ignoreTrimWhitespace": true
+    },
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
+    "terminal.external.osxExec": "Iterm.app",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.detectIndentation": false,
+    "editor.guides.bracketPairs": "active",
+    "editor.minimap.enabled": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderControlCharacters": true,
+    "editor.fontFamily": "'FiraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "black-formatter.args": [
+        "-l 120"
+    ],
+    "isort.check": true,
+    "editor.rulers": [
+        120
+    ],
+    "editor.showFoldingControls": "always",
+    "editor.snippetSuggestions": "top",
+    "editor.tabSize": 4,
+    "emmet.includeLanguages": {
+        "erb": "html"
+    },
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "explorer.confirmDelete": false,
+    "files.exclude": {
+        "__pycache__": true,
+        "_site": true,
+        ".asset-cache": true,
+        ".bundle": true,
+        ".ipynb_checkpoints": true,
+        ".pytest_cache": true,
+        ".sass-cache": true,
+        ".svn": true,
+        "**/.DS_Store": true,
+        "**/.egg-info": true,
+        "**/.git": true,
+        "build": true,
+        "coverage": true,
+        "dist": true,
+        "log": true,
+        "node_modules": true,
+        "public/packs": true,
+        "tmp": true
+    },
+    "files.hotExit": "off",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+        "**/audits/**": true,
+        "**/coverage/**": true,
+        "**/log/**": true,
+        "**/node_modules/**": true,
+        "**/tmp/**": true,
+        "**/vendor/**": true
+    },
+    "notebook.diff.ignoreMetadata": true,
+    "notebook.markup.fontSize": 13,
+    "python.defaultInterpreterPath": "/Users/farid/.pyenv/versions/3.10.6/envs/default_env",
+    "python.languageServer": "Pylance",
+    "python.terminal.activateEnvironment": false,
+    "telemetry.telemetryLevel": "off",
+    "window.restoreWindows": "none",
+    "window.newWindowDimensions": "maximized",
+    "color-highlight.markerType": "dot-before",
+    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.settings.editor": "json",
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.settings.useSplitJSON": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.panel.defaultLocation": "bottom",
+    "editor.inlineSuggest.enabled": true,
+    "jupyter.runStartupCommands": [
+        "%load_ext autoreload",
+        "%autoreload 2"
+    ],
+    "git.autofetch": true,
+    "git.enableCommitSigning": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "cmake.options.statusBarVisibility": "icon",
+    "workbench.colorTheme": "Atom One Light",
+    "vscode-edge-devtools.webhint": false,
+    "githubIssues.queries": [
+        {
+            "label": "My Issues",
+            "query": "is:open assignee:${user} repo:${owner}/${repository}",
+            "groupBy": [
+                "milestone"
+            ]
+        },
+        {
+            "label": "Created Issues",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        },
+        {
+            "label": "Recent Issues",
+            "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+        }
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "[markdown]": {
+        "diffEditor.ignoreTrimWhitespace": true
+    },
+    "jupyter.askForKernelRestart": false,
+    "githubPullRequests.pullBranch": "never",
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+    "notebook.formatOnSave.enabled": true
 }
