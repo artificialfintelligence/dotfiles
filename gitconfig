@@ -62,8 +62,8 @@
   defaultBranch = main
 
 [user]
-	email = farid@panalyt.com
-	name = Farid Taba
+	email = farid.t@gmail.com
+	name = Farid \"Freddie\" Taba
 
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
