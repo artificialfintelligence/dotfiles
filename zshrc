@@ -129,6 +129,8 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+source ~/.aliases
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -155,6 +157,10 @@ alias cp='cp -i'
 
 # Prevent rm -f from asking for confirmation on things like `rm -f *.bak`.
 setopt rm_star_silent
+
+# Configure shell environment language
+alias en="export LANG=en_US.UTF-8"
+alias jp="export LANG=ja_JP.UTF-8"
 
 # source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
