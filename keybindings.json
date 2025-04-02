@@ -13,5 +13,20 @@
   {
     "key": "ctrl+alt+cmd+/",
     "command": "github.copilot.toggleCopilot"
+  },
+  {
+    "key": "cmd+l",
+    "command": "expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+shift+w",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]
