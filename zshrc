@@ -191,27 +191,21 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 
 # quickly open a gs:// URL in the browser
 gsopen() {
-  if [[ -z "$1" ]]; then
+  local url input bucket object
+  input="$1"
+
+  if [[ "$input" != gs://* ]]; then
     echo "Usage: gsopen gs://bucket/path/to/object"
     return 1
   fi
 
-  if [[ "$1" != gs://* ]]; then
-    echo "Error: Input must be a gs:// URL"
-    return 1
-  fi
+  input="${input#gs://}"              # Remove gs://
+  bucket="${input%%/*}"              # Extract bucket
+  object="${input#*/}"               # Extract object path
 
-  # Remove gs:// and split into bucket and path
-  path="${1#gs://}"
-  bucket="${path%%/*}"
-  object="${path#*/}"
-
-  # Construct and open URL
   url="https://console.cloud.google.com/storage/browser/_details/${bucket}/${object}"
   echo "Opening: $url"
-
-  # Open in default browser (works on macOS)
-  open "$url"
+  command -v open >/dev/null && open "$url" || echo "Failed to open browser."
 }
 
 
