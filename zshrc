@@ -189,6 +189,31 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 
 # export GOOGLE_APPLICATION_CREDENTIALS=/Users/fafa/Projects/GCP/dezc-svc-acct-brilliant-vent-400717-412c3f33b8db.json
 
+# quickly open a gs:// URL in the browser
+gsopen() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: gsopen gs://bucket/path/to/object"
+    return 1
+  fi
+
+  if [[ "$1" != gs://* ]]; then
+    echo "Error: Input must be a gs:// URL"
+    return 1
+  fi
+
+  # Remove gs:// and split into bucket and path
+  path="${1#gs://}"
+  bucket="${path%%/*}"
+  object="${path#*/}"
+
+  # Construct and open URL
+  url="https://console.cloud.google.com/storage/browser/_details/${bucket}/${object}"
+  echo "Opening: $url"
+
+  # Open in default browser (works on macOS)
+  open "$url"
+}
+
 
 # # >>> conda initialize >>>
 # # !! Contents within this block are managed by 'conda init' !!
@@ -212,3 +237,8 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 # # Control + arrows
 # bindkey ";5C" forward-word
 # bindkey ";5D" backward-word
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/farid/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
